@@ -95,11 +95,11 @@ class convert_file():
                 cur = self.do_intro()
                 self.do_paras(cur)
             break
-        with open(self.out_file, "w") as f:
+        with io.open(self.out_file, "w", encoding='utf-8') as f:
             f.write(json.dumps(self.template, ensure_ascii=False, indent=4))
 
 
-json_template = {"type":"game","tags":[],"lang":"en-gb","grouplang":"W_2DjxIAAC4A84EU","main_headline":[],"preamble":[],
+json_template = {"type":"game","tags":[],"main_headline":[],"preamble":[],
 "how_to_win_title":[],"how_to_win_text":[],"winning_symbols_title":[],"symbols_images":[{}],"winning_symbols_text":[],
 "gameplaytitle":[],"gameplay_text":[],"gameplayimages":[],"special_features_title":[],"special_features_text":[],
 "jackpot_feature_title":[],"jackpot_feature_text":[],"payouts_and_wagering_limits_title":[],"payouts_and_wagering_limits_text":[],
